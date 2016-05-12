@@ -22,7 +22,7 @@ module.exports = (robot) ->
         message = "最近のニュースを投下します！\n"
 
         for item in items
-          message += "<" + item["title"] + "|" + item["link"] + ">\n"
+          message += "<" + item["link"] + "|" + item["title"] + ">\n"
 
         msg.send message
     )
