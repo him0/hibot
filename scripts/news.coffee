@@ -23,7 +23,7 @@ module.exports = (robot) ->
 
         # for item in items
         #   message += "<" + item["link"] + "|" + item["title"] + ">\n"
-        message += "<http://example.com|test>\n"
+        message += "[<http://example.com|test>]\n"
 
         msg.send message
     )
