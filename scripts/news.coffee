@@ -24,5 +24,13 @@ module.exports = (robot) ->
         # for item in items
         #   message += "<" + item["link"] + "|" + item["title"] + ">\n"
 
-        robot.emit 'slack.attachment', {text: "<https://github.com|git> test">}  
+      robot.emit 'slack.attachment',
+        message: msg.message
+        content:[{
+          text: "attachment text"
+          attachments: [{
+            title: "test"
+            title_link: "https://api.slack.com/"
+          }]
+        }]
     )
