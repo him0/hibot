@@ -23,7 +23,6 @@ module.exports = (robot) ->
 
         # for item in items
         #   message += "<" + item["link"] + "|" + item["title"] + ">\n"
-        message += "[<http://example.com|test>]\n"
 
-        msg.send message
+        robot.emit 'slack.attachment', {text: "<https://github.com|git> test">}  
     )
