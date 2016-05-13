@@ -21,16 +21,14 @@ module.exports = (robot) ->
         items = random_pickup(articles, 3)
         message = "テストリンクを投下します！\n"
 
-        # for item in items
-        #   message += "<" + item["link"] + "|" + item["title"] + ">\n"
+        news = []
+        for item in items
+          news.push({
+            title: item["title"]
+            title_link: item["title"]
+          })
 
       robot.emit 'slack.attachment',
         message: msg.message
-        content:[{
-          text: "attachment text"
-          attachments: [{
-            title: "test"
-            title_link: "https://api.slack.com/"
-          }]
-        }]
+        content: news
     )
