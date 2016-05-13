@@ -25,12 +25,11 @@ module.exports = (robot) ->
         for item in items
           news.push({
             title: item["title"]
-            title_link: item["title"]
+            title_link: item["link"]
           })
-
-        console.log news
 
         robot.emit 'slack.attachment',
           message: msg.message
+          text: message
           content: news
     )
