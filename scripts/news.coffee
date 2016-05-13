@@ -28,7 +28,9 @@ module.exports = (robot) ->
             title_link: item["title"]
           })
 
-      robot.emit 'slack.attachment',
-        message: msg.message
-        content: news
+        console.log news
+
+        robot.emit 'slack.attachment',
+          message: msg.message
+          content: news
     )
