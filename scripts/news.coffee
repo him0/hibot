@@ -19,7 +19,7 @@ module.exports = (robot) ->
         throw err if (err)
 
         items = random_pickup(articles, 3)
-        message = "テストリンクを投下します！\n"
+        message = "ランダムで話題を投下します！\n"
 
         news = []
         for item in items
