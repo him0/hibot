@@ -1,3 +1,9 @@
+# Description:
+#   Show the recent news
+#
+# Commands:
+#   hubot news - show some news
+
 random_pickup = (array, num) ->
   pickup_items = []
 
